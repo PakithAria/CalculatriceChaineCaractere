@@ -1,0 +1,14 @@
+﻿@model PP.Calculatrice.ChaineCaractere.Models.CalculModel
+@{
+    ViewBag.Title = "Calculatrice";
+}
+
+<h2>Calculatrice</h2>
+
+@using (Html.BeginForm("Index", "Calculatrice"))
+{
+
+    @Html.TextBoxFor(model => model.Calcul, "", new { @class = "form-control", placeholder = "Entrer l'opération!" })
+    <br />
+    <input type="submit" value="Calculer" />
+}
